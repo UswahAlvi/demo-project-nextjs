@@ -1,10 +1,9 @@
 'use client'
 import ResultsList from "./_Components/ResultsList";
 import Statusbar from "./_Components/Statusbar";
-import { Suspense, useState } from "react";
+import {useState } from "react";
 import { Item, Status } from "./types";
 import Topbar from "./_Components/Topbar";
-import FallbackComponent from "./_Components/FallbackComponent";
 
 export default function Page(){
   const [data, setData] = useState<Item[]>([])
@@ -13,6 +12,7 @@ export default function Page(){
   async function fetchData(query : string){
     try{
       setStatus(Status.pending)
+      setData([])
       const data = await fetch(`https://frontend-test-api.digitalcreative.cn/?no-throttling=true&search=${query}`)
       const res = await data.json()
       setData(res)
@@ -26,12 +26,10 @@ export default function Page(){
   <>  
     <div className="flex flex-col gap-[20px] p-[24px] pb-[0px] max-h-[480px]">
      <Topbar fetchData={fetchData}/>
-     <Suspense fallback={<FallbackComponent status={status} />}>
-      <ResultsList results={data}/>
-     </Suspense>
+     <ResultsList results={data} status={status}/>
      </div>
     <hr className="text-(--color-gray)"/>
-   <Statusbar length={data.length}/>
+   <Statusbar length={data.length} status={status}/>
   </>
   );
 }

@@ -5,8 +5,7 @@ import Spinner from "./Spinner";
 export default function FallbackComponent({status}: {status: Status}){
     return(
         <>
-        {status === Status.pending} && <Spinner />
-        {}
+        {status === Status.pending ? <Spinner /> : <></>}
         </>
     )
 }
