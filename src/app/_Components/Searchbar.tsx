@@ -1,14 +1,17 @@
-'use client'
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { FetchData } from "../types";
+import { useData } from "../_Context/context";
 
-export default function Searchbar({query, onQueryUpdate}: {query: string, onQueryUpdate: any}){ 
-   
+export default function Searchbar(){ 
+    const {query, dispatch} = useData()
    const inputRef = useRef<HTMLInputElement>(null);
    const focusInput = () =>{
     if(inputRef.current!== null)
         inputRef.current?.focus()
+   }
+   const onQueryUpdate = (value: string) => {
+    dispatch({type:"queryUpdated", payload: value})
    }
     return (
        <div className="inline-flex w-full p-[24px] bg-(--color-gray) rounded-xs border-3 border-transparent focus-within:border-(--primary-menu) cursor-text"

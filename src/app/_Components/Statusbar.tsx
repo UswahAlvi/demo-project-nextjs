@@ -1,6 +1,8 @@
+import { useData } from "../_Context/context";
 import { Status } from "../types";
 
-export default function Statusbar({length, status}: {length : number, status: Status}){
+export default function Statusbar(){
+    const {status, length} = useData()
     return(
     <>
     <div className="px-[24] pt-[15] pb-[14]">

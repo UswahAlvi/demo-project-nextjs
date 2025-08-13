@@ -1,11 +1,16 @@
 import Image from "next/image";
 import { Status } from "../types";
 import Spinner from "./Spinner";
+import { useData } from "../_Context/context";
 
-export default function FallbackComponent({status}: {status: Status}){
+export default function FallbackComponent(){
+    const {status, length} = useData()
+    if(length) return<></>;
     return(
-        <>
-        {status === Status.pending ? <Spinner /> : <></>}
-        </>
+        <div className="flex justify-center align-center w-full h-full grow-1">
+        {
+        status === Status.idle ? <Image src='/searching-icon.svg' width={247} height={192} alt='no result'/> :
+        status === Status.pending ? <Spinner /> : <></>}
+        </div>
     )
 }

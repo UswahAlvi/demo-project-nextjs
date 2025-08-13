@@ -1,6 +1,12 @@
 import Image from "next/image";
+import { useData } from "../_Context/context";
 
-export default function TagItem({name, active, handleClick}:{name: string, active: boolean, handleClick: any}){
+export default function TagItem({name}:{name: string}){
+    const {query, dispatch} = useData()
+    const active = name.toLowerCase() === query.toLowerCase()
+    const handleClick = (name : string) =>{
+        dispatch({type: 'queryUpdated', payload: name})
+    }
     return(
         <div className={`group flex gap-[8px] bg-(--color-gray) hover:bg-(--secondary-menu) ${active ? 'bg-(--primary-menu)': ''} px-[16px] py-[6px] rounded-[40px] cursor-pointer`}
         onClick={()=>handleClick(name)}>
