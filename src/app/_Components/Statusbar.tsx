@@ -6,8 +6,9 @@ export default function Statusbar(){
     return(
     <>
     <div className="px-[24] pt-[15] pb-[14]">
-       <span className="text-[16px] text-(--paragraph) font-medium">
-        {status === Status.pending ? 'Searching ...' : `${length ? length : 'No'} result${length>1 ? 's' : ''}`}
+       <span className={`text-[16px] font-medium ${status===Status.error || status === Status.timedOut ? 'text-(--error)':'text-(--paragraph) '}`}>
+        {status ===Status.error || status === Status.timedOut? 'Something wrong happened but this is not your fault : )':
+        status === Status.pending ? 'Searching ...' : `${length ? length : 'No'} result${length>1 ? 's' : ''}`}
        </span>
     </div>
     </>

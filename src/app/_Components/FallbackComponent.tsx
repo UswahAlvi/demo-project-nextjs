@@ -10,7 +10,8 @@ export default function FallbackComponent(){
         <div className="flex justify-center align-center w-full h-full grow-1">
         {
         status === Status.idle ? <Image src='/searching-icon.svg' width={247} height={192} alt='no result'/> :
-        status === Status.pending ? <Spinner /> : <></>}
+        status === Status.pending ? <Spinner /> : 
+        status === Status.timedOut || status === Status.error || !length? <Image src='/error.svg' width={247} height={200} alt='error image'/> : <></>}
         </div>
     )
 }

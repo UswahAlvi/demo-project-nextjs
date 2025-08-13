@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { FetchData } from "../types";
 import { useData } from "../_Context/context";
+import { Status } from "../types";
 
 export default function Searchbar(){ 
-    const {query, dispatch} = useData()
+    const {query, status, dispatch} = useData()
    const inputRef = useRef<HTMLInputElement>(null);
    const focusInput = () =>{
     if(inputRef.current!== null)
@@ -14,7 +14,9 @@ export default function Searchbar(){
     dispatch({type:"queryUpdated", payload: value})
    }
     return (
-       <div className="inline-flex w-full p-[24px] bg-(--color-gray) rounded-xs border-3 border-transparent focus-within:border-(--primary-menu) cursor-text"
+       <div className={`inline-flex w-full p-[24px] bg-(--color-gray) rounded-xs 
+         cursor-text  border-3  
+        ${status===Status.error || status === Status.timedOut ? 'border-(--error)': 'border-transparent focus-within:border-(--primary-menu)'}`}
        onClick={focusInput}
        >
         <Image className="w-auto h-auto" src='/search-icon.svg' width={24} height={24} alt='search icon' />
