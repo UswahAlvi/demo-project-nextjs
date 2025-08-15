@@ -8,9 +8,9 @@ export default function ResultsContainer(){
     useEffect(()=>{
         dispatch({type: 'reset'})
     },[])
-    return(<>
+    return(<div className="relative">
         <ResultsList />
         <FallbackComponent />
-    </>
+    </div>
     )
 }

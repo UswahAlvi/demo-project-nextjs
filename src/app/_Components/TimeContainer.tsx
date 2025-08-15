@@ -41,7 +41,7 @@ export default function TimeContainer() {
   }, [])
 
   return (
-    <div className="flex absolute bottom-[50px] left-[50px] text-[var(--paragraph)] font-bold text-[20px]">
+    <div className="flex absolute bottom-[15px] left-[10px] sm:bottom-[50px] sm:left-[40px] text-[var(--paragraph)] font-bold text-[20px]"  suppressHydrationWarning={true}>
       {padStartWithZero(hours)} : {padStartWithZero(minutes)} : {padStartWithZero(seconds)}
     </div>
   )

@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Page component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col gap-[10px] sm:gap-[20px] p-[12px] pb-[0px] sm:p-[24px] sm:pb-[0px] max-h-[500px] w-full h-full"
+  >
+    <div
+      class="inline-flex w-full p-[12px] sm:p-[24px] bg-(--color-gray) rounded-xs 
+         cursor-text  border-3  
+        border-transparent focus-within:border-(--primary-menu)"
+    >
+      <img
+        alt="search icon"
+        class="w-auto h-auto"
+        data-nimg="1"
+        decoding="async"
+        height="24"
+        loading="lazy"
+        src="/search-icon.svg"
+        style="color: transparent;"
+        width="24"
+      />
+      <div
+        class="relative w-full ]"
+      >
+        <input
+          class="w-full p-[1px] pl-[12px] text-[14px] sm:text-[20px] font-normal overflow-hidden focus:outline-none whitespace-nowrap"
+          name="search"
+          type="text"
+          value=""
+        />
+        <span
+          class="absolute top-0 left-[12px] w-full h-full text-[14px] sm:text-[20px] text-base text-gray-400 pointer-events-none whitespace-nowrap overflow-hidden text-ellipsis z-0"
+        >
+          Search what technologies we are using at DC...
+        </span>
+      </div>
+    </div>
+    <div
+      class="hidden sm:flex gap-[16px]"
+    >
+      <div
+        class="group/tag flex gap-[8px] bg-(--color-gray) hover:bg-(--secondary-menu)   px-[16px] py-[6px] rounded-[40px] cursor-pointer"
+      >
+        <img
+          alt="primary menu icon"
+          class=" group-hover/tag:hidden "
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/menu-icon-primary.svg"
+          style="color: transparent;"
+          width="20"
+        />
+        <img
+          alt="secondary menu icon"
+          class="hidden  group-hover/tag:flex }"
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/menu-icon-secondary.svg"
+          style="color: transparent;"
+          width="20"
+        />
+        <span
+          class="text-[14px] font-medium capitilize text-(--primary-menu) group-hover/tag:text-(--white) "
+        >
+          Languages
+        </span>
+      </div>
+      <div
+        class="group/tag flex gap-[8px] bg-(--color-gray) hover:bg-(--secondary-menu)   px-[16px] py-[6px] rounded-[40px] cursor-pointer"
+      >
+        <img
+          alt="primary menu icon"
+          class=" group-hover/tag:hidden "
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/menu-icon-primary.svg"
+          style="color: transparent;"
+          width="20"
+        />
+        <img
+          alt="secondary menu icon"
+          class="hidden  group-hover/tag:flex }"
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/menu-icon-secondary.svg"
+          style="color: transparent;"
+          width="20"
+        />
+        <span
+          class="text-[14px] font-medium capitilize text-(--primary-menu) group-hover/tag:text-(--white) "
+        >
+          Build
+        </span>
+      </div>
+      <div
+        class="group/tag flex gap-[8px] bg-(--color-gray) hover:bg-(--secondary-menu)   px-[16px] py-[6px] rounded-[40px] cursor-pointer"
+      >
+        <img
+          alt="primary menu icon"
+          class=" group-hover/tag:hidden "
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/menu-icon-primary.svg"
+          style="color: transparent;"
+          width="20"
+        />
+        <img
+          alt="secondary menu icon"
+          class="hidden  group-hover/tag:flex }"
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/menu-icon-secondary.svg"
+          style="color: transparent;"
+          width="20"
+        />
+        <span
+          class="text-[14px] font-medium capitilize text-(--primary-menu) group-hover/tag:text-(--white) "
+        >
+          Design
+        </span>
+      </div>
+      <div
+        class="group/tag flex gap-[8px] bg-(--color-gray) hover:bg-(--secondary-menu)   px-[16px] py-[6px] rounded-[40px] cursor-pointer"
+      >
+        <img
+          alt="primary menu icon"
+          class=" group-hover/tag:hidden "
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/menu-icon-primary.svg"
+          style="color: transparent;"
+          width="20"
+        />
+        <img
+          alt="secondary menu icon"
+          class="hidden  group-hover/tag:flex }"
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/menu-icon-secondary.svg"
+          style="color: transparent;"
+          width="20"
+        />
+        <span
+          class="text-[14px] font-medium capitilize text-(--primary-menu) group-hover/tag:text-(--white) "
+        >
+          Cloud
+        </span>
+      </div>
+    </div>
+    <div
+      class="relative sm:hidden gap-[16px] p-[6px] rounded-[20px] cursor-pointer self-end"
+      style="width: fit-content;"
+    >
+      <img
+        alt="dropdown icon"
+        class=" transition-transform"
+        data-nimg="1"
+        decoding="async"
+        height="5"
+        loading="lazy"
+        src="/_next/image?url=%2Fdropdown-icon.png&w=48&q=75"
+        srcset="/_next/image?url=%2Fdropdown-icon.png&w=32&q=75 1x, /_next/image?url=%2Fdropdown-icon.png&w=48&q=75 2x"
+        style="color: transparent;"
+        width="20"
+      />
+    </div>
+    <div
+      class="flex justify-center align-center w-full h-[300px] sm:h-[400px] grow-1"
+    >
+      <img
+        alt="no result"
+        data-nimg="1"
+        decoding="async"
+        height="192"
+        loading="lazy"
+        src="/searching-icon.svg"
+        style="color: transparent;"
+        width="247"
+      />
+    </div>
+  </div>
+  <hr
+    class="text-(--color-gray)"
+  />
+  <div
+    class="px-[12px] py-[7px] sm:px-[24] sm:pt-[15] sm:pb-[14]"
+  >
+    <span
+      class="text-[14px] sm:text-[16px] font-medium text-(--paragraph) "
+    >
+      No result
+    </span>
+  </div>
+</DocumentFragment>
+`;

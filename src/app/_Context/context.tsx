@@ -18,8 +18,6 @@ function reducer(state: State, action: Action): State{
       return {
         ...state,
         query: action.payload,
-        results: [],
-        length: 0,
         status: Status.pending,
       };
     case 'dataReceived':

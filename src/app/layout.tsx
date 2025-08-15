@@ -18,11 +18,11 @@ export default function Layout({
     <html lang="en" className={poppins.className}>
       <body>
         <div className='flex justify-center items-center relative min-h-screen'>
-          <div className="flex flex-col bg-[white] w-[590px] rounded-sm shadow-lg max-h-[651px] ">  
+          <div className="flex flex-col bg-[white] w-[400px] sm:w-[600px] rounded-sm shadow-(--shadow-box) max-h-[651px] ">  
             {children}
           </div>
           <TimeContainer />
-          <Image className='absolute bottom-[50] right-[50] h-auto' src='/logo.svg' width={82} height={44.28} alt='logo'/>
+          <Image className='absolute bottom-[10] right-[10] sm:bottom-[40] sm:right-[40] h-auto' src='/logo.svg' width={82} height={44.28} alt='logo'/>
         </div>
       </body>
     </html>

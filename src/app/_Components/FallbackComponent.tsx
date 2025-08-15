@@ -7,7 +7,7 @@ export default function FallbackComponent(){
     const {status, length} = useData()
     if(length) return<></>;
     return(
-        <div className="flex justify-center align-center w-full h-full grow-1">
+        <div className="flex justify-center align-center w-full h-[300px] sm:h-[400px] grow-1">
         {
         status === Status.idle ? <Image src='/searching-icon.svg' width={247} height={192} alt='no result'/> :
         status === Status.pending ? <Spinner /> : 

@@ -11,9 +11,10 @@
   --error:#ED2E7E;
   --paragraph:#999FAA;
   --radius-sm: 20px;
-  --shadow-lg: 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.25);
+  --shadow-box: 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.25);
   --radius-xs: 12px;
 }
+
 
 @theme inline {
   --color-background: var(--background);
