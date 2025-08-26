@@ -1,6 +1,6 @@
 'use client';
 import {createContext, useContext, useReducer, ReactNode, Dispatch} from 'react';
-import { State, Status, Item, Action } from '../types';
+import { State, Status, Action } from '../types';
 
 const initialState: State = {
   query: '',

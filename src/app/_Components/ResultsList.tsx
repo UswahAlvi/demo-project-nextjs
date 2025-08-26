@@ -6,7 +6,7 @@ import ResultItemComponent from './ResultItem';
 import { ActionType, Item, Status } from '../types';
 import Spinner from './Spinner';
 
-const TIMEOUT =6000;
+const TIMEOUT = 7000;
 
 export default function ResultsList() {
   const { query, results, status, dispatch, length } = useData();
@@ -32,7 +32,8 @@ export default function ResultsList() {
         );
         const data: Item[] = await res.json();
         dispatch({ type: ActionType.dataReceived, payload: data });
-      } catch (err: any) {
+      } 
+      catch (err: any) {
         if (err?.name === 'AbortError') {
           dispatch({ type: ActionType.requestTimedOut });
         } else {
@@ -52,9 +53,7 @@ export default function ResultsList() {
       controllerRef.current?.abort();
     };
   }, [query, dispatch]);
-
-  if (!length) return <></>;
-
+  if(!length) return <></>
   return (<>
     <div
         className={`flex flex-col max-h-[300px] gap-[10px] overflow-scroll transition-opacity duration-300 ${

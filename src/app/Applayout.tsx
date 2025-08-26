@@ -15,18 +15,12 @@ export default function Layout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={poppins.className}>
-      <body>
-        <main>
         <div className='flex justify-center items-center relative min-h-screen'>
           <div className="flex flex-col bg-[white] w-[400px] sm:w-[600px] rounded-sm shadow-(--shadow-box) max-h-[651px] ">  
             {children}
           </div>
           <TimerWrapper />
-          <Image className='absolute bottom-[10px] right-[10px] sm:bottom-[40px] sm:right-[40px] h-auto' src='/logo.svg' width={82} height={44.28} alt='logo'/>
+          <Image className='absolute bottom-[10] right-[10] sm:bottom-[40] sm:right-[40] h-auto' src='/logo.svg' width={82} height={44.28} alt='logo'/>
         </div>
-        </main>
-      </body>
-    </html>
   )
 }
